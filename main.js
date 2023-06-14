@@ -1,4 +1,4 @@
-/* function maiorQueOutroNumero(num1, num2){
+function maiorQueOutroNumero(num1, num2){
     if(num1 > num2){
         return num1;
     } else {
@@ -140,7 +140,7 @@ function retornaSegundoMaiorNumero(array){
     return Segundomaior;
 }
 
-console.log(retornaSegundoMaiorNumero([1, 2, 3, 4, 5])); */
+console.log(retornaSegundoMaiorNumero([1, 2, 3, 4, 5]));
 
 function calculaMediaDeAlunos(listaAlunos){
     let media = 0;
