@@ -129,6 +129,10 @@ function somaElementos(array){
 console.log(somaElementos([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 function retornaSegundoMaiorNumero(array){
+    array = array.sort(function(a,b){
+        return a - b;
+    })
+
     let Segundomaior = 0;
     for(let i = 0; i < array.length; i++){
         for (let j = 0; j < array.length; j++) {
