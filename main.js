@@ -9,11 +9,7 @@ function maiorQueOutroNumero(num1, num2){
 console.log(maiorQueOutroNumero(6, 5));
 
 function idadeEmdias(idade){
-    let idadeEmDias = 0;
-    for(let i= 1; i <= idade; i++){
-        idadeEmDias += 365;
-    }
-    return idadeEmDias;
+    return idade * 365;
 }
 
 console.log(idadeEmdias(17));
