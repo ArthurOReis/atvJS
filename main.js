@@ -1,9 +1,5 @@
 function maiorQueOutroNumero(num1, num2){
-    if(num1 > num2){
-        return num1;
-    } else {
-        return num2;
-    }
+    return(num1 > num2 ? true : false);
 }
 
 console.log(maiorQueOutroNumero(6, 5));
