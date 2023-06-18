@@ -146,7 +146,7 @@ function retornaSegundoMaiorNumero(array){
 
 console.log(retornaSegundoMaiorNumero([1, 2, 3, 4, 5]));
 
-function calculaMediaDeAlunos(listaAlunos){
+function calculaMediaDeAlunos(listaAlunos){ //Incompleto
     let media = 0;
     for(let i = 0; i < listaAlunos.length; i++){
         media = (listaAlunos[i].nota1 + listaAlunos[i].nota2 + listaAlunos[i].nota3 + listaAlunos[i].nota4) / 4;
