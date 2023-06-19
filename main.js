@@ -27,10 +27,8 @@ function retornaOposto(valor) {
         switch(valor){
             case true:
                 return false;
-                break;
             case false:
                 return true;
-                break;
         }
 
         if(valor > 0 || valor < 0){
@@ -43,7 +41,7 @@ function retornaOposto(valor) {
     }
 }
 
-console.log(retornaOposto(0));
+console.log(retornaOposto(15));
 
 function multiplicacaoHardcore(num1, num2){
     const valornum1 = num1;
@@ -107,37 +105,33 @@ function retornaSegundoMaiorNumero(array){
 
 console.log(retornaSegundoMaiorNumero([1, 2, 3, 4, 5]));
 
-function calculaMediaDeAlunos(listaAlunos){ //Incompleto
-    let media = 0;
-    for(let i = 0; i < listaAlunos.length; i++){
-        media = (listaAlunos[i].nota1 + listaAlunos[i].nota2 + listaAlunos[i].nota3 + listaAlunos[i].nota4) / 4;
-        media = media.toFixed(2);
-        return `{nome ${listaAlunos[i].nome}, media: ${media}`
+function melhoresAlunos(estudantes) {
+    let melhorAluno = { nome: '', media: 0 };
+
+    for (let aluno in estudantes) {
+        let notas = estudantes[aluno];
+        let soma = 0;
+
+        for (let i = 0; i < notas.length; i++) {
+            soma += notas[i];
+        }
+
+        let media = soma / notas.length;
+
+        if (media > melhorAluno.media) {
+            melhorAluno.nome = aluno;
+            melhorAluno.media = media;
+        }
     }
+
+    return melhorAluno;
 }
 
-const alunos = [
-    {
-        nome: 'Arthur',
-        nota1: 7.4,
-        nota2: 5.5,
-        nota3: 10,
-        nota4: 8.4
-    },
-    {
-        nome: 'Daniela',
-        nota1: 6.4,
-        nota2: 3.7,
-        nota3: 7,
-        nota4: 9.5
-    },
-    {
-        nome: 'José',
-        nota1: 9.0,
-        nota2: 9.5,
-        nota3: 10,
-        nota4: 8.4
-    }
-];
+const estudantes = {
+    Augusto: [8, 7.6, 8.9, 6],
+    Mariana: [9, 6.6, 7.9, 8],
+    Carla: [7, 7, 8, 9]
+};
 
-console.log(calculaMediaDeAlunos(alunos));
+const melhorAluno = melhoresAlunos(estudantes);
+console.log(melhorAluno);
